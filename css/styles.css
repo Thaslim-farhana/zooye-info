@@ -25,11 +25,28 @@ body{
     color:var(--ink);
     background-color:var(--bg);
     background-image:
-      repeating-linear-gradient(25deg, rgba(16,33,61,0.05) 0 1px, transparent 1px 70px),
-      repeating-linear-gradient(115deg, rgba(16,33,61,0.05) 0 1px, transparent 1px 70px);
+      linear-gradient(rgba(16,33,61,0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(16,33,61,0.045) 1px, transparent 1px);
+    background-size:64px 64px;
     background-attachment:fixed;
     -webkit-font-smoothing:antialiased;
-  }
+}
+
+/* ---------- FULL WEBSITE GRID ---------- */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:9999;
+
+    background-image:
+      linear-gradient(rgba(16,33,61,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(16,33,61,0.025) 1px, transparent 1px);
+
+    background-size:64px 64px;
+}
 
 h1,h2,h3,h4{ font-family:'Manrope', sans-serif; letter-spacing:-0.02em; }
 
